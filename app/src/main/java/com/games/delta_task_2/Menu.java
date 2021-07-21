@@ -69,14 +69,15 @@ private MediaPlayer mediaPlayer ;
     }
     @Override
     public void onBackPressed() {
-        mediaPlayer.stop();
-        mediaPlayer.release();
+
         AlertDialog.Builder Builder = new AlertDialog.Builder(this);
         Builder.setTitle("Exit");
         Builder.setMessage("Are you sure u want to exit?");
         Builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                mediaPlayer.stop();
+                mediaPlayer.release();
                 finish();
             }
         });

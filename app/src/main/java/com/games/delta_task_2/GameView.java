@@ -174,7 +174,7 @@ public class GameView extends View {
         }
         if(Menu.difficulty ==0)
         {
-            if( dx > 0)
+            if( dx > 0 )
                 Aix = Aix + 5;
             if( dx < 0)
                 Aix = Aix - 5;
